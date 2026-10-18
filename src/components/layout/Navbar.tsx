@@ -54,17 +54,17 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <nav className="container-wide flex items-center justify-between h-20 lg:h-24">
+        <nav className="container-wide flex items-center justify-between h-16 md:h-20 lg:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group" aria-label="SAVORA home">
             <UtensilsCrossed
-              size={22}
+              size={20}
               className={`transition-colors duration-300 ${
                 solid ? 'text-amber-400' : 'text-cream-50'
               } group-hover:text-amber-400`}
             />
             <span
-              className={`text-2xl font-serif font-semibold tracking-[0.15em] transition-colors duration-300 ${
+              className={`text-xl md:text-2xl font-serif font-semibold tracking-[0.12em] md:tracking-[0.15em] transition-colors duration-300 ${
                 solid ? 'text-cream-50' : 'text-cream-50'
               }`}
             >
@@ -94,15 +94,15 @@ export default function Navbar() {
           </ul>
 
           {/* Action icons */}
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center gap-0.5 md:gap-4">
             <button
               onClick={openFavorites}
               className="relative text-cream-50 hover:text-amber-400 transition-colors p-2"
               aria-label={`Favorites (${favCount})`}
             >
-              <Heart size={22} />
+              <Heart size={20} />
               {favCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-wine-600 text-cream-50 text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                <span className="absolute top-0 right-0 bg-wine-600 text-cream-50 text-[10px] font-bold w-4 h-4 md:w-5 md:h-5 flex items-center justify-center rounded-full">
                   {favCount}
                 </span>
               )}
@@ -112,9 +112,9 @@ export default function Navbar() {
               className="relative text-cream-50 hover:text-amber-400 transition-colors p-2"
               aria-label={`Cart (${totalItems})`}
             >
-              <ShoppingCart size={22} />
+              <ShoppingCart size={20} />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-amber-500 text-espresso-900 text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                <span className="absolute top-0 right-0 bg-amber-500 text-espresso-900 text-[10px] font-bold w-4 h-4 md:w-5 md:h-5 flex items-center justify-center rounded-full">
                   {totalItems}
                 </span>
               )}
@@ -143,7 +143,7 @@ export default function Navbar() {
           className="absolute inset-0 bg-espresso-900"
           onClick={() => setMobileOpen(false)}
         />
-        <div className="relative flex h-full flex-col items-center justify-center gap-8 pt-20">
+        <div className="relative flex h-full flex-col items-center justify-center gap-6 md:gap-8 pt-16 md:pt-20">
           {navLinks.map((link) => {
             const active = location.pathname === link.path;
             return (

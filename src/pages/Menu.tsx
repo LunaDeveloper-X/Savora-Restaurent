@@ -45,13 +45,13 @@ export default function Menu() {
         image="https://images.pexels.com/photos/7627408/pexels-photo-7627408.jpeg?auto=compress&cs=tinysrgb&h=900&w=1920"
       />
 
-      <section className="py-20 md:py-28 bg-cream-50">
+      <section className="py-10 md:py-28 bg-cream-50">
         <div className="container-wide">
           {/* Search + Filters */}
           <Reveal>
-            <div className="mb-12">
+            <div className="mb-8 md:mb-12">
               {/* Search bar */}
-              <div className="relative max-w-md mx-auto mb-10">
+              <div className="relative max-w-md mx-auto mb-6 md:mb-10">
                 <Search
                   size={18}
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-espresso-300"
@@ -112,11 +112,11 @@ export default function Menu() {
             </div>
           ) : (
             <>
-              <p className="text-sm text-espresso-400 mb-8">
+              <p className="text-sm text-espresso-400 mb-6 md:mb-8">
                 Showing {filtered.length} {filtered.length === 1 ? 'item' : 'items'}
                 {filter !== 'All' && ` in ${filter}`}
               </p>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
                 {filtered.map((item, idx) => (
                   <Reveal key={item.id} delay={(idx % 4) * 80}>
                     <MenuCard item={item} onViewDetails={setSelectedDish} />

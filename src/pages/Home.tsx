@@ -1,4 +1,5 @@
 import Hero from '@/components/home/Hero';
+import Explore from '@/components/home/Explore';
 import FeaturedDishes from '@/components/home/FeaturedDishes';
 import AboutPreview from '@/components/home/AboutPreview';
 import Specialties from '@/components/home/Specialties';
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Explore />
       <div id="featured-dishes">
         <FeaturedDishes />
       </div>

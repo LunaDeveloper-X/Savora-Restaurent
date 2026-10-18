@@ -60,8 +60,8 @@ export default {
         '88': '22rem',
       },
       fontSize: {
-        'hero': ['clamp(3rem, 8vw, 7rem)', { lineHeight: '1', letterSpacing: '0.02em' }],
-        'display': ['clamp(2.25rem, 5vw, 4rem)', { lineHeight: '1.1', letterSpacing: '0.01em' }],
+        'hero': ['clamp(2.1rem, 8vw, 7rem)', { lineHeight: '1.05', letterSpacing: '0.02em' }],
+        'display': ['clamp(1.75rem, 5vw, 4rem)', { lineHeight: '1.1', letterSpacing: '0.01em' }],
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
